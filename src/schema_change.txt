@@ -1,0 +1,53 @@
+
+----Schema Change Summary Start----
+Old version schema is located in: src/schema_v1
+New version schema is located in: src/schema_v2
+
+----New Tables----
+[1] faz_event
+[2] fna_event
+[3] fct_fct_event
+
+----Deleted Tables----
+[1] fsa_event
+[2] fgt_waf
+[3] fsa_malware
+
+----Table Column Change----
+
+[1] fgt_ssl
+====Column Type Change====
+    id  [string->bigint]
+[2] fgt_dlp
+====Deleted Columns====
+    logid  [string]
+====New Columns====
+    logid_new  [string]
+[3] fch_ips
+====Deleted Columns====
+    dtime  [timestamp]
+    epid  [int]
+    vd  [string]
+    profiletype  [string]
+    bid  [int]
+====New Columns====
+    vd_new  [string]
+    epid_new  [int]
+    profiletype_new  [string]
+    bid_new  [int]
+    dtime_new  [timestamp]
+====Column Type Change====
+    agent  [string->int]
+    dsteuid  [int->string]
+    direction  [string->int]
+[4] fch_contentlog
+====Deleted Columns====
+    dtime  [timestamp]
+    epid  [int]
+    dsteuid  [int]
+    euid  [int]
+    dstepid  [int]
+    bid  [int]
+
+----Schema Change Summary End----
+
