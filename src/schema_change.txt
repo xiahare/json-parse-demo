@@ -752,3 +752,925 @@ New version schema is located in: /root/STSWorkspace/schema.checker/json-parse-d
 
 ----Schema Change Summary End----
 
+
+----Schema Change Summary Start----
+Old version schema is located in: D:\work\wsSamples\wsSTSStudy\json-parser-study\src\global_mapping_v6.2.json
+New version schema is located in: D:\work\wsSamples\wsSTSStudy\json-parser-study\src\new\global_mapping.json
+
+----New Tables----
+[1] fna_event
+[2] sys_generic
+[3] fch_event
+[4] fpx_event
+[5] fgt_file_filter
+[6] fct_fct_netscan
+[7] faz_event
+
+----Table Column Change----
+
+[1] fac_event
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+[2] fch_anomaly
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    attackid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[3] fch_app_ctrl
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    sessionid  [StringType->LongType]
+    appid  [StringType->LongType]
+[4] fch_contentlog
+====Deleted Columns====
+    custom  [StringType]
+====New Columns====
+    custom_field1  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    policyid  [StringType->LongType]
+    eventid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[5] fch_dlp
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    eventid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[6] fch_ips
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    attackid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[7] fch_netscan
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->StringType]
+    vulnid  [StringType->LongType]
+    assetid  [StringType->LongType]
+    policyid  [StringType->LongType]
+[8] fch_spam
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[9] fch_traffic
+====Deleted Columns====
+    custom  [StringType]
+====New Columns====
+    custom_field1  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    appid  [StringType->LongType]
+[10] fch_virus
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    virusid  [StringType->LongType]
+[11] fch_voip
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    session_id  [StringType->LongType]
+    event_id  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policy_id  [StringType->LongType]
+[12] fch_webfilter
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    ovrdid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[13] fct_fct_event
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sigid  [StringType->LongType]
+    catid  [StringType->ShortType]
+    appid  [StringType->LongType]
+    ruleid  [StringType->LongType]
+    vulnid  [StringType->LongType]
+[14] fct_fct_traffic
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sessionid  [StringType->LongType]
+[15] fdd_attack
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    uniqueid  [StringType->LongType]
+[16] fdd_event
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    msg_id  [StringType->ShortType]
+[17] fgt_app_ctrl
+====New Columns====
+    securityid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    appid  [StringType->IntegerType]
+[18] fgt_contentlog
+====Deleted Columns====
+    custom  [StringType]
+====New Columns====
+    custom_field1  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    eventid  [StringType->LongType]
+    proto  [IntegerType->StringType]
+[19] fgt_dlp
+====New Columns====
+    securityid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+    subservice  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    eventid  [StringType->LongType]
+[20] fgt_dns
+====New Columns====
+    translationid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    xid  [StringType->IntegerType]
+    tdinfoid  [StringType->LongType]
+[21] fgt_emailfilter
+====New Columns====
+    securityid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[22] fgt_event
+====New Columns====
+    authid  [StringType]
+    tz  [StringType]
+    direction  [StringType]
+    cfgname  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    policyid  [StringType->LongType]
+    cfgtid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    tunnelid  [StringType->LongType]
+    radioid  [StringType->ShortType]
+    session_id  [StringType->LongType]
+    iaid  [StringType->LongType]
+    pid  [StringType->LongType]
+    chassisid  [StringType->ShortType]
+    newchassisid  [StringType->ShortType]
+    oldchassisid  [StringType->ShortType]
+    alarmid  [StringType->LongType]
+    groupid  [StringType->LongType]
+    xid  [StringType->LongType]
+    vulnid  [StringType->LongType]
+    auditid  [StringType->LongType]
+[23] fgt_fct_event
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sigid  [StringType->LongType]
+    catid  [StringType->ShortType]
+    appid  [StringType->IntegerType]
+    ruleid  [StringType->LongType]
+    vulnid  [StringType->LongType]
+[24] fgt_fct_netscan
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    vulnid  [StringType->LongType]
+[25] fgt_fct_traffic
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sessionid  [StringType->LongType]
+[26] fgt_gtp
+====New Columns====
+    tz  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    headerteid  [StringType->LongType]
+    c_sgsn_teid  [StringType->LongType]
+    c_ggsn_teid  [StringType->LongType]
+    u_sgsn_teid  [StringType->LongType]
+    u_ggsn_teid  [StringType->LongType]
+    cpteid  [StringType->LongType]
+    cpdlteid  [StringType->LongType]
+    cpdlisrteid  [StringType->LongType]
+    cpulteid  [StringType->LongType]
+[27] fgt_ips
+====New Columns====
+    securityid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    attackid  [StringType->IntegerType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+[28] fgt_netscan
+====New Columns====
+    sfsid  [LongType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    vulnid  [StringType->LongType]
+    assetid  [StringType->LongType]
+[29] fgt_ssh
+====New Columns====
+    sfsid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[30] fgt_ssl
+====New Columns====
+    sfsid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+[31] fgt_traffic
+====Deleted Columns====
+    custom  [StringType]
+====New Columns====
+    custom_field1  [StringType]
+    countff  [IntegerType]
+    identifier  [IntegerType]
+    securityid  [LongType]
+    securityact  [StringType]
+    tz  [StringType]
+    srcdomain  [StringType]
+    dstauthserver  [StringType]
+    dstgroup  [StringType]
+    dstuser  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    appid  [StringType->IntegerType]
+    centralnatid  [StringType->LongType]
+    vwpvlanid  [StringType->LongType]
+    shapingpolicyid  [StringType->LongType]
+    vwlid  [StringType->LongType]
+    tdinfoid  [StringType->LongType]
+[32] fgt_virus
+====New Columns====
+    sfsid  [LongType]
+    securityid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+    subservice  [StringType]
+    cdrcontent  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    virusid  [StringType->LongType]
+[33] fgt_voip
+====New Columns====
+    tz  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    session_id  [StringType->LongType]
+    policy_id  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    event_id  [StringType->LongType]
+[34] fgt_waf
+====New Columns====
+    tz  [StringType]
+    srcdomain  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    eventid  [StringType->LongType]
+[35] fgt_webfilter
+====New Columns====
+    securityid  [LongType]
+    tz  [StringType]
+    srcdomain  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    policyid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    transid  [StringType->LongType]
+    ovrdid  [StringType->LongType]
+    tdinfoid  [StringType->LongType]
+[36] fmg_event
+====Deleted Columns====
+    sid  [StringType]
+====New Columns====
+    package_desc  [StringType]
+    sensor_name  [StringType]
+    sensor_st  [StringType]
+    sensor_val  [StringType]
+    session_id  [LongType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    adom_oid  [StringType->LongType]
+    dev_oid  [StringType->LongType]
+    pid  [StringType->LongType]
+    pkg_oid  [StringType->LongType]
+    supplier_id  [StringType->ShortType]
+    uploading_pid  [StringType->LongType]
+    valid  [StringType->ShortType]
+[37] fml_event
+====New Columns====
+    scope  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+[38] fml_history
+====New Columns====
+    client_cc  [StringType]
+    scope  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+[39] fml_spam
+====New Columns====
+    scope  [StringType]
+    user  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+[40] fml_virus
+====New Columns====
+    scope  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+[41] fpx_app_ctrl
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    appid  [StringType->LongType]
+[42] fpx_dlp
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    eventid  [StringType->LongType]
+[43] fpx_dns
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    xid  [StringType->IntegerType]
+[44] fpx_emailfilter
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+[45] fpx_http
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    transid  [StringType->LongType]
+[46] fpx_ips
+====New Columns====
+    threat  [StringType]
+    threatlevel  [ShortType]
+    threattype  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    attackid  [StringType->LongType]
+[47] fpx_ssh
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+[48] fpx_traffic
+====New Columns====
+    sentdelta  [LongType]
+    rcvddelta  [LongType]
+    threats  [StringType]
+    threattyps  [StringType]
+    threatlvls  [StringType]
+    threatcnts  [StringType]
+    threatwgts  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    shapingpolicyid  [StringType->LongType]
+    appid  [StringType->LongType]
+    centralnatid  [StringType->LongType]
+    vwpvlanid  [StringType->LongType]
+[49] fpx_virus
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    virusid  [StringType->LongType]
+[50] fpx_voip
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    proto  [IntegerType->ShortType]
+    policy_id  [StringType->LongType]
+    session_id  [StringType->LongType]
+    event_id  [StringType->LongType]
+[51] fpx_waf
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    eventid  [StringType->LongType]
+[52] fpx_webfilter
+====New Columns====
+    urlsource  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    proto  [IntegerType->ShortType]
+    policyid  [StringType->LongType]
+    sessionid  [StringType->LongType]
+    ovrdid  [StringType->LongType]
+[53] fsa_event
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    proto  [IntegerType->StringType]
+    dbid  [StringType->LongType]
+    pid  [StringType->LongType]
+[54] fsa_malware
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    jobid  [StringType->LongType]
+    proto  [IntegerType->StringType]
+[55] fsa_netalert
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    virusid  [StringType->IntegerType]
+    attackid  [StringType->IntegerType]
+[56] fwb_attack
+====New Columns====
+    matched_field  [StringType]
+    matched_pattern  [StringType]
+    owasp_top10  [StringType]
+    bot_info  [StringType]
+    backend_service  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    msg_id  [StringType->LongType]
+    proto  [IntegerType->StringType]
+    ml_url_dbid  [StringType->LongType]
+    ml_arg_dbid  [StringType->LongType]
+[57] fwb_event
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    msg_id  [StringType->LongType]
+[58] fwb_traffic
+====New Columns====
+    original_src  [StringType]
+    original_srccountry  [StringType]
+====Column Type Change====
+    bid  [StringType->IntegerType]
+    euid  [StringType->IntegerType]
+    epid  [StringType->IntegerType]
+    dsteuid  [StringType->IntegerType]
+    dstepid  [StringType->IntegerType]
+    sfsid  [StringType->LongType]
+    msg_id  [StringType->LongType]
+    proto  [IntegerType->StringType]
+
+----Schema Change Summary End----
+
+
+----Schema Change Summary Start----
+Old version schema is located in: D:\work\wsSamples\wsSTSStudy\json-parser-study\src\global_mapping.json
+New version schema is located in: D:\work\wsSamples\wsSTSStudy\json-parser-study\src\new\global_mapping.json
+
+----Table Column Change----
+
+[1] fgt_app_ctrl
+====New Columns====
+    srcdomain  [StringType]
+[2] fgt_dlp
+====New Columns====
+    srcdomain  [StringType]
+    subservice  [StringType]
+[3] fgt_dns
+====New Columns====
+    srcdomain  [StringType]
+[4] fgt_emailfilter
+====New Columns====
+    srcdomain  [StringType]
+[5] fgt_event
+====New Columns====
+    direction  [StringType]
+    cfgname  [StringType]
+[6] fgt_ips
+====New Columns====
+    srcdomain  [StringType]
+[7] fgt_ssh
+====New Columns====
+    srcdomain  [StringType]
+[8] fgt_ssl
+====New Columns====
+    srcdomain  [StringType]
+[9] fgt_traffic
+====New Columns====
+    srcdomain  [StringType]
+    dstauthserver  [StringType]
+    dstgroup  [StringType]
+    dstuser  [StringType]
+[10] fgt_virus
+====New Columns====
+    srcdomain  [StringType]
+    subservice  [StringType]
+    cdrcontent  [StringType]
+[11] fgt_waf
+====New Columns====
+    srcdomain  [StringType]
+[12] fgt_webfilter
+====New Columns====
+    srcdomain  [StringType]
+[13] fml_event
+====New Columns====
+    scope  [StringType]
+[14] fml_history
+====New Columns====
+    scope  [StringType]
+[15] fml_spam
+====New Columns====
+    scope  [StringType]
+    user  [StringType]
+[16] fml_virus
+====New Columns====
+    scope  [StringType]
+[17] fgt_file_filter
+====New Columns====
+    srcdomain  [StringType]
+    subservice  [StringType]
+
+----Schema Change Summary End----
+
+
+----Schema Change Summary Start----
+Old version schema is located in: D:\work\wsSamples\wsSTSStudy\json-parser-study\src\v6.2.2\global_mapping.json
+New version schema is located in: D:\work\wsSamples\wsSTSStudy\json-parser-study\src\v6.2.5\global_mapping.json
+
+----Table Column Change----
+
+[1] fgt_app_ctrl
+====New Columns====
+    srcdomain  [StringType]
+[2] fgt_dlp
+====New Columns====
+    srcdomain  [StringType]
+    subservice  [StringType]
+[3] fgt_dns
+====New Columns====
+    srcdomain  [StringType]
+[4] fgt_emailfilter
+====New Columns====
+    srcdomain  [StringType]
+[5] fgt_event
+====New Columns====
+    direction  [StringType]
+    cfgname  [StringType]
+[6] fgt_ips
+====New Columns====
+    srcdomain  [StringType]
+[7] fgt_ssh
+====New Columns====
+    srcdomain  [StringType]
+[8] fgt_ssl
+====New Columns====
+    srcdomain  [StringType]
+[9] fgt_traffic
+====New Columns====
+    srcdomain  [StringType]
+    dstauthserver  [StringType]
+    dstgroup  [StringType]
+    dstuser  [StringType]
+[10] fgt_virus
+====New Columns====
+    srcdomain  [StringType]
+    subservice  [StringType]
+    cdrcontent  [StringType]
+[11] fgt_waf
+====New Columns====
+    srcdomain  [StringType]
+[12] fgt_webfilter
+====New Columns====
+    srcdomain  [StringType]
+[13] fml_event
+====New Columns====
+    scope  [StringType]
+[14] fml_history
+====New Columns====
+    scope  [StringType]
+[15] fml_spam
+====New Columns====
+    scope  [StringType]
+    user  [StringType]
+[16] fml_virus
+====New Columns====
+    scope  [StringType]
+[17] fgt_file_filter
+====New Columns====
+    srcdomain  [StringType]
+    subservice  [StringType]
+
+----Schema Change Summary End----
+
