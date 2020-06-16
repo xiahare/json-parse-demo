@@ -1,0 +1,24 @@
+drop table if exists __root_test_fct_netscan;
+create table __root_test_fct_netscan
+(
+    `itime` timestamp not null,
+    `adomid` bigint not null,
+    `devid` string not null,
+    `vd` string not null,
+    `id` bigint not null,
+    `bid` int,
+    `dtime` timestamp not null,
+    `vulnproducts` string,
+    primary key(`itime`,`adomid`,`devid`,`vd`,`id`)
+)
+partition by hash(id) partitions 2 STORED AS KUDU TBLPROPERTIES ('kudu.num_tablet_replicas' = '1');
+
+DROP VIEW IF EXISTS 10001_test_fct_netscan;
+CREATE VIEW IF NOT EXISTS 10001_test_fct_netscan 
+AS SELECT * FROM __root_test_fct_netscan WHERE adomId = 10001;
+
+alter table __root_test_fct_netscan add if not exists columns (testintcolumn1 int, testintcolumn2 int);
+
+alter view 10001_test_fct_netscan as SELECT * FROM __root_test_fct_netscan WHERE adomId = 10001;
+
+
